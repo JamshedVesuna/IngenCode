@@ -32,8 +32,26 @@ function TaskListWidget(title) {
 	}
 	
 	widget.removeCheckedTasks = function(index) {
-		$(widget.table).find("tr").each( function() {
+		// remove checked elements
+		$(widget.table).find("tr").each( function(index, value) {
+			if (index == 0) {
+				return;
+			}
 			
+			var checkbox = $(value).find("input[type=\"checkbox\"]")[0];
+			
+			if (checkbox.checked) {
+				$(value).remove();
+			}
+		});
+		
+		// renumber the ID
+		$(widget.table).find("tr").each( function(index, value) {
+			if (index == 0) {
+				return;
+			}
+			
+			$(value).attr("id", index.toString());
 		});
 	}
 	
