@@ -1,15 +1,21 @@
 /****************
      Fonts
 *****************/
-
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
+
+
+/****************
+    Sections
+*****************/ 
 
 body {
     font-family: 'Roboto', cursive;
     font-weight: 300;
-    background-image: url('/frontend/images/LinkedInTexture.png);
-    background-repeat: repeat-x;
-    /* Content */
+
+    color: white;
+
+    background-image: url(/frontend/images/jqueryTexture.jpg);
+    background-repeat: repeat-x repeat-y;
 }
 
 p {
