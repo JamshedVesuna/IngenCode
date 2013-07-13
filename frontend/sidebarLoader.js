@@ -24,7 +24,7 @@ $(document).ready( function() {
 	
 	xsltProcessor = new XSLTProcessor();
 	xsltProcessor.importStylesheet(xsltData);
-	var resultDocument = xsltProcessor.transformToFragment(xmlData, document);
+	resultDocument = xsltProcessor.transformToFragment(xmlData, document);
 	
 	alert(resultDocument);
 	
