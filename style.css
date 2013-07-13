@@ -43,7 +43,20 @@ body {
     height: 100%;
     /* width: 20%; */
     background: url(/frontend/images/LinkedInTexture.png) repeat-y;
+    /*display: none; */
     color:black;
+}
+.slide {
+    position: relative;
+}
+.slide .sidebar {
+    position: absolute;
+    right: 0;
+}
+#expand {
+    float:right;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 /* Paragraph Content */
@@ -53,3 +66,8 @@ p {
 
 
 /* Footer */
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
