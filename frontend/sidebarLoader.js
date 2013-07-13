@@ -19,14 +19,9 @@ $(document).ready( function() {
 		}
 	});
 	
-	alert(xmlData);
-	alert(xsltData);
-	
 	xsltProcessor = new XSLTProcessor();
 	xsltProcessor.importStylesheet(xsltData);
 	var resultDocument = xsltProcessor.transformToFragment(xmlData, document);
-	
-	alert(resultDocument);
 	
 	$(".sidebarContent").append(resultDocument);
 });
