@@ -21,5 +21,6 @@ $(document).ready( function() {
    xsltProcessor=new XSLTProcessor();
    xsltProcessor.importStylesheet(xls);
    resultDocument = xsltProcessor.transformToFragment(xml,document);
-   document.getElementById("sidebarContent").appendChild(resultDocument);
+   $('sidebarContent').append(resultDocument);
+  /* document.getElementById("sidebarContent").appendChild(resultDocument); */
 });
