@@ -14,19 +14,38 @@ function TaskListWidget(title) {
 	});
 	$(".widgetContent", widget.html).append(rawHTML);
 	
-	// init the 
-	widget.list = new Array();
-	
 	// plug the widget in
 	widget.div.object = widget;	
 	
+	// get the item template and hide it away
 	widget.itemTemplate = $("#itemTemplate", widget.html)[0];
 	$("<table></table>").append(widget.itemTemplate);
+	
+	// store an instance of the list table
+	widget.table = $(widget.html).find("table")[0];
+	
+	// fancy member function for widget :D
+	widget.addTask = function (task) {
+		var newTask = $(widget.itemTemplate).clone();
+		$(newTask).attr("id", $(widget.table).find("tr").length.toString());
+		$("table", widget.html).append(newTask);
+	}
+	
+	widget.removeCheckedTasks = function(index) {
+		$(widget.table).find("tr").each( function() {
+			
+		});
+	}
 	
 	return widget;
 }
 
 function Task(text) {
-	this.text = text;
+	if (text == null) {
+		this.text = "";
+	}
+	else {
+		this.text = text;
+	}
 	this.completed = false;
 }
