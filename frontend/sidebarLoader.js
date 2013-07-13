@@ -13,7 +13,7 @@ $(document).ready( function() {
          xsltProcessor=new XSLTProcessor();
          xsltProcessor.importStylesheet(xls);
          resultDocument = xsltProcessor.transformToFragment(xml,document);
-         alert(resultDocument);
+         //alert(resultDocument);
          $('.sidebarContent').append(resultDocument);
          //document.getElementById("sidebarContent").appendChild(resultDocument);
        }
@@ -25,10 +25,10 @@ $(document).ready( function() {
 $.get('/widgets/widget_names.xml')
  .done(function(data){    
   // this function is executed if the request was sucessfull
-  alert("yay!");
+  //alert("yay!");
  })
  .fail(function(){
- alert("Oh no!");
+ //alert("Oh no!");
  // this function is executed if the request fails
  });
             
@@ -39,11 +39,11 @@ $.get('/widgets/widget_names.xml')
   // parse the xml
   data = $.parseXML(data);
  // do anything you want with the parsed data
- alert(data);
+ //alert(data);
  $('.sidebarContent').append(data);
   })
   .fail(function(){
-  alert('something went wrong!');
+  //alert('something went wrong!');
    })    ;
   
  
