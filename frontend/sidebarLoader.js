@@ -19,6 +19,7 @@ $(document).ready( function() {
   });
  
    xsltProcessor=new XSLTProcessor();
+   alert(xsltProcessor);
    xsltProcessor.importStylesheet(xls);
    resultDocument = xsltProcessor.transformToFragment(xml,document);
    alert(resultDocument);
