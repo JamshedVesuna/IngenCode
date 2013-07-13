@@ -23,5 +23,5 @@ $(document).ready( function() {
    resultDocument = xsltProcessor.transformToFragment(xml,document);
    alert(resultDocument);
    $('.sidebarContent').append(resultDocument);
-  /* document.getElementById("sidebarContent").appendChild(resultDocument); */
+   /*document.getElementById("sidebarContent").appendChild(resultDocument); */
 });
