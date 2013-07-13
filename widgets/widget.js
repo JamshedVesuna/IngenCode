@@ -10,7 +10,9 @@ function Widget(title) {
 			rawHTML = data;
 		}
 	});
-	this.html = $(rawHTML);
+	
+	this.html = $("<div>").html(rawHTML);
+	this.div = this.html.find(".widget")[0];
 	
 	// Class functions
 	//

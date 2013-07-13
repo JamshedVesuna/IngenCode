@@ -13,11 +13,13 @@
   
 <script type="text/javascript" src="/widgets/widget.js"></script>
 <script type="text/javascript" src="/widgets/iframe/IframeWidget.js"></script>
+<script type="text/javascript" src="/widgets/tasklist/TaskListWidget.js"></script>
 
 <script type="text/javascript">
 	$(document).ready( function(e) {
 		//var firstWidget = new Widget("testing");
-		var firstWidget = new IframeWidget("IFrame Widget");
+		//var firstWidget = new IframeWidget("IFrame Widget");
+		var firstWidget = new TaskListWidget("tasklist");
 		$("#widgetContainer").append(firstWidget.html);
 		
 		$(".widget").draggable();
