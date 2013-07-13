@@ -4,12 +4,10 @@ $(document).ready( function() {
   var xls;
   $.ajax({
    url: "/widgets/widget_names.xml",
-   async: false,
    success: function(data) {
      xml = data;
      $.ajax({
        url: "/widgets/widget_names.xslt",
-       async: false,
        success: function(data) {
          xls = data;
          xsltProcessor=new XSLTProcessor();
