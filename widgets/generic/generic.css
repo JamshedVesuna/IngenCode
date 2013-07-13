@@ -2,5 +2,9 @@
 /* CSS Document */
 
 .widget {
-	background-color:red;
+	background-color:#0FF;
+	
+	display:block;	
+	width:200px;
+	height:200px;
 }

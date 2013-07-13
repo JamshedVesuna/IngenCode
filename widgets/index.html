@@ -3,16 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Widget test page</title>
+
+<!-- stylesheets -->
 <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
-<script type="text/javascript" src="/framework/jquery-2.0.3.js"></script>
+<!-- imported libraries -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
+<!-- widgets -->
 <script type="text/javascript" src="GenericWidget.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function (e) {
 		var firstNode = new GenericWidget();
 		$("#widgetContainer").append(firstNode.html);
+		$(".widget").draggable();
+		$(".widget").resizable();
 	});
 </script>
 
