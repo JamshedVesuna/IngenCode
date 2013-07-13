@@ -1,12 +1,18 @@
 /****************
      Fonts
 *****************/
+
 @font-face {
-    font-family: "Roboto";
-    src: url(http://ingencode.com/Roboto/Roboto-Regular.tff) format("truetype");
+    font-family: 'Roboto-Light';
+    src: url(http://ingencode.com/Roboto/Roboto-Light.tff) format("truetype");
 }
 
 body {
-    font-family: Roboto;
+    font-family: 'Roboto-Light', cursive;
+    /* Content */
+}
+
+p {
+    /* Content */
 }
 
