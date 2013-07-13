@@ -1,23 +1,39 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Font import */
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400); 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+
 .widget {
-	display:block;
-	width:250px;
-	height:250px;
-	
-	border:0px;
-	margin:0px;
-	padding:10px;
-	
-	background-color:#0FF;
+    /* Change font */
+    /* font-family: 'Roboto Condensed', cursive; */
+    font-family: 'Roboto Condensed', sans-serif;
+  	display: block;
+  	width: 250px;
+  	height: 195px;
+  	padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 15px;
+	  background-image: url(/frontend/images/LinkedInTexture.png);
+    background-repeat: repeat-x repeat-y;
 }
 
 .widgetTitle {
-	background-color:grey;
+    font-size: 130%;
+    font-weight: 300;
+    color: black;
+    text-shadow: 2px 3px 4px #aaa;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
 }
 
 .widgetContent {
-	width:100%;
-	height:auto;
+  	width:100%;
+  	height:auto;
 }
