@@ -8,7 +8,22 @@
     Sections
 *****************/ 
 
-body {
+/* Header */ 
+
+#pageheader {
+    width: 100%;
+    background: #0769AD !important;
+    border-radius: 15px;
+    font-size: 300%;
+}
+
+#logo {
+  margin-left: 20px;
+}
+/* Main Area */
+html, body {
+    width: 100%;
+
     font-family: 'Roboto', cursive;
     font-weight: 300;
 
@@ -22,3 +37,5 @@ p {
     /* Content */
 }
 
+
+/* Footer */
