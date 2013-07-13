@@ -9,30 +9,44 @@
 *****************/ 
 
 /* Header */ 
-
 #pageheader {
-    width: 100%;
-    background: #0769AD !important;
+    
+    /* background: #0769AD !important; */
+    color: #0769AD;
     border-radius: 15px;
     font-size: 300%;
+    z-index: 10;
 }
 
+/* Site Logo */
 #logo {
-  margin-left: 20px;
+    /* margin-left: 20px; */
 }
-/* Main Area */
-html, body {
-    width: 100%;
 
+/* Main Area */
+body {
+    margin: 0px !important;
+    /* width: 100%; */
     font-family: 'Roboto', cursive;
     font-weight: 300;
-
     color: white;
-
     background-image: url(/frontend/images/jqueryTexture.jpg);
     background-repeat: repeat-x repeat-y;
 }
 
+/* Sidebar */
+.sidebar {
+    z-index: 100;
+    float: right;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 100%;
+    /* width: 20%; */
+    background: url(/frontend/images/LinkedInTexture.png) repeat-y;
+    color:black;
+}
+
+/* Paragraph Content */
 p {
     /* Content */
 }
