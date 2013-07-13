@@ -5,11 +5,11 @@ $(document).ready( function() {
   $.ajax({
    url: "/widgets/widget_names.xml",
    success: function(data) {
-     xml = data;
+     xml = $(data);
      $.ajax({
        url: "/widgets/widget_names.xslt",
        success: function(data) {
-         xls = data;
+         xls = $(data);
          xsltProcessor=new XSLTProcessor();
          xsltProcessor.importStylesheet(xls);
          resultDocument = xsltProcessor.transformToFragment(xml,document);
