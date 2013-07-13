@@ -3,11 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Widget test page</title>
+<link rel="stylesheet" href="style.css"/>
+
+<script type="text/javascript" src="/framework/jquery-2.0.3.js"></script>
+
+<script type="text/javascript" src="GenericWidget.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {
+		var firstNode = new GenericWidget();
+		$("#widgetContainer").append(firstNode.html);
+	});
+</script>
+
 </head>
 
 <body>
 	<h1>This is a widget test page</h1>
     <div id="widgetContainer">
+    	
     </div>
 </body>
 </html>
