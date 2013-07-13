@@ -2,13 +2,16 @@
      Fonts
 *****************/
 
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
+
 @font-face {
     font-family: 'Roboto-Light';
     src: url(http://ingencode.com/Roboto/Roboto-Light.tff) format("truetype");
 }
 
 body {
-    font-family: 'Roboto-Light', cursive;
+    font-family: 'Roboto', cursive;
+    font-weight: 400;
     /* Content */
 }
 
