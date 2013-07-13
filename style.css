@@ -43,7 +43,7 @@ body {
     height: 100%;
     /* width: 20%; */
     background: url(/frontend/images/LinkedInTexture.png) repeat-y;
-    /*display: none; */
+    display: none;
     color:black;
 }
 .slide {
