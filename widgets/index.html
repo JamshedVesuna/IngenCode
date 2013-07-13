@@ -20,7 +20,12 @@
 		var firstNode = new GenericWidget();
 		$("#widgetContainer").append(firstNode.html);
 		$(".widget").draggable();
-		$(".widget").resizable();
+		$(".widget").resizable({
+			maxHeight: 500,
+			minHeight: 100,
+			maxWidth: 500,
+			minWidth: 100
+		});
 	});
 </script>
 
