@@ -4,28 +4,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Widget test page</title>
 
-<!-- stylesheets -->
-<link rel="stylesheet" href="style.css"/>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<!-- css import -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 
-<!-- imported libraries -->
+<!-- jquery import -->
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
-<!-- widgets -->
-<script type="text/javascript" src="GenericWidget.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+<script type="text/javascript" src="/widgets/widget.js"></script>
+<script type="text/javascript" src="/widgets/iframe/IframeWidget.js"></script>
 
 <script type="text/javascript">
-	$(document).ready(function (e) {
-		var firstNode = new GenericWidget();
-		$("#widgetContainer").append(firstNode.html);
+	$(document).ready( function(e) {
+		//var firstWidget = new Widget("testing");
+		var firstWidget = new IframeWidget("IFrame Widget");
+		$("#widgetContainer").append(firstWidget.html);
+		
 		$(".widget").draggable();
-		$(".widget").resizable({
-			maxHeight: 500,
-			minHeight: 100,
-			maxWidth: 500,
-			minWidth: 100
-		});
+		$(".widget").resizable();
 	});
 </script>
 
@@ -33,8 +29,7 @@
 
 <body>
 	<h1>This is a widget test page</h1>
-    <div id="widgetContainer">
-    	
+	<div id="widgetContainer">
     </div>
 </body>
 </html>
