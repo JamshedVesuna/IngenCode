@@ -1,8 +1,20 @@
-<widgets>
-  <name>
-  Task List
-  </name>
-  <name>
-  iFrame
-  </name>
-</widgets>
+<widgetlist>
+  
+  <widget>
+    
+    <title>
+      Task List
+    </title>
+
+  </widget>
+
+ 
+ <widget>
+    
+    <title>
+      iFrame
+    </title>
+ 
+ </widget>
+
+</widgetlist>
