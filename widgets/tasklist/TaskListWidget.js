@@ -7,6 +7,9 @@ function TaskListWidget(title) {
 	$(".widgetContent", widget.html).load("/widgets/tasklist/content.html");
 	widget.list = new Array();
 	
+	// plug the widget in
+	widget.div.object = widget;
+	
 	return widget;
 }
 

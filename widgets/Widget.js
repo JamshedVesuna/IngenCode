@@ -12,7 +12,7 @@ function Widget(title) {
 	});
 	
 	this.html = $("<div>").html(rawHTML);
-	this.div = this.html.find(".widget")[0];
+	this.div = $(".widget", this.html)[0];
 	
 	// Class functions
 	//
