@@ -5,11 +5,11 @@ $(document).ready( function() {
   $.ajax({
    url: "/widgets/widget_names.xml",
    success: function(data) {
-     xml = $(data);
+     xml = data;
      $.ajax({
        url: "/widgets/widget_names.xslt",
        success: function(data) {
-         xls = $(data);
+         xls = data;
          xsltProcessor=new XSLTProcessor();
          xsltProcessor.importStylesheet(xls);
          resultDocument = xsltProcessor.transformToFragment(xml,document);
@@ -21,5 +21,30 @@ $(document).ready( function() {
     }
   });
 
+
+$.get('/widgets/widget_names.xml')
+ .done(function(data){    
+  // this function is executed if the request was sucessfull
+  alert("yay!");
+ })
+ .fail(function(){
+ alert("Oh no!");
+ // this function is executed if the request fails
+ });
+            
+
+
+$.get('/widgets/widget_names.xml')
+.done(function(data){
+  // parse the xml
+  data = $.parseXML(data);
+ // do anything you want with the parsed data
+ alert(data);
+ $('.sidebarContent').append(data);
+  })
+  .fail(function(){
+  alert('something went wrong!');
+   })    ;
+  
  
 });
