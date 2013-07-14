@@ -11,7 +11,7 @@
 <xsl:template match="widget">
   <tr>
     <td>
-      <img src="{logo/@source}"/>
+      <img class="sidebar-logos" src="{logo/@source}"/>
     </td>
     <td>
       <xsl:value-of select="@displayname"/>

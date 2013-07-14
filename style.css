@@ -46,12 +46,21 @@ body {
     display: none;
     color:black;
 }
+.sidebarContent {
+    list-style:none;
+}
 .slide {
     position: relative;
 }
 .slide .sidebar {
     position: absolute;
     right: 0;
+}
+
+.sidebar-logos {
+  border-radius: 10px;
+  height: 30px;
+  width: 30px;
 }
 #expand {
     float:right;
