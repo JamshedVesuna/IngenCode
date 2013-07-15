@@ -48,19 +48,13 @@ body {
 .sidebarContent {
     list-style:none;
 }
-.slide {
-    position: relative;
-}
-.slide .sidebar {
-    position: absolute;
-    right: 0;
-}
-
+/* Sidebar widget icons */
 .sidebar-logos {
   border-radius: 6px;
   height: 30px;
   width: 30px;
 }
+/* Bottom [+] icon for sidebar slider */
 #expand {
     float:right;
     margin-right: 10px;
@@ -79,3 +73,15 @@ p {
     bottom: 0;
     width: 100%;
 }
+
+
+/* Misc Code
+
+.slide {
+    position: relative;
+}
+.slide .sidebar {
+    position: absolute;
+    right: 0;
+}
+*/
