@@ -1,0 +1,17 @@
+# set default behavior if users haven't set core.autocrlf
+* text=auto
+
+# text files
+*.html	text
+*.htm	text
+*.js	text
+*.xslt	text
+*.xml	text
+*.css	text
+*.md	text
+
+# binary files
+*.jpg	binary
+*.jpeg	binary
+*.png	binary
+*.gif	binary
