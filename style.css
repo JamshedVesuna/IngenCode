@@ -1,0 +1,81 @@
+/****************
+     Fonts
+*****************/
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
+
+
+/****************
+    Sections
+*****************/ 
+
+/* Header */ 
+#pageheader {
+    
+    /* background: #0769AD !important; */
+    color: #0769AD;
+    border-radius: 15px;
+    font-size: 300%;
+    z-index: 10;
+}
+
+/* Site Logo */
+#logo {
+}
+
+/* Main Area */
+body {
+    margin: 0px !important;
+    /* width: 100%; */
+    font-family: 'Roboto', cursive;
+    font-weight: 300;
+    color: white;
+    background-image: url(/frontend/images/jqueryTexture.jpg);
+    background-repeat: repeat-x repeat-y;
+}
+
+/* Sidebar */
+.sidebar {
+    z-index: 100;
+    float: right;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 100%;
+    /* width: 20%; */
+    background: url(/frontend/images/LinkedInTexture.png) repeat-y;
+    display: none;
+    color:black;
+}
+.sidebarContent {
+    list-style:none;
+}
+.slide {
+    position: relative;
+}
+.slide .sidebar {
+    position: absolute;
+    right: 0;
+}
+
+.sidebar-logos {
+  border-radius: 6px;
+  height: 30px;
+  width: 30px;
+}
+#expand {
+    float:right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Content */
+p {
+    /* Content */
+}
+
+
+/* Footer */
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,24 @@
+<html>
+	<head>
+    	<link rel="stylesheet" href="/widgets/tasklist/style.css"/>
+        <script type="text/javascript" src="/widgets/tasklist/event.js"></script>
+    </head>
+    
+    <body>
+    	<table class="fullWidth">
+        	<tr>
+                <th>Completed</th>
+                <th>Task</th>
+            </tr>
+            <tr id="itemTemplate">
+            	<td class="centered">
+                	<input type="checkbox"/>
+                </td>
+                <td class="centered"><input type="text" class="fullWidth"/></td>
+            </tr>
+        </table>
+        
+        <button onclick="addTask(event)">Add</button>
+        <button onclick="removeCheckedTasks(event)">Remove</button>
+    </body>
+</html>

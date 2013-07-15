@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<widgetlist>
+  
+  <widget location="/widgets/tasklist" displayname="Task List">
+
+    <logo  source="/frontend/images/task-icon.png" />
+
+  </widget>
+
+ 
+ <widget location="/widgets/iframe" displayname="IFrame">
+ 
+   <logo source="/frontend/images/iframe-icon.png"/>
+
+ </widget>
+
+</widgetlist>
