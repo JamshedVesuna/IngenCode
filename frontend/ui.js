@@ -4,7 +4,7 @@ $(document).ready(function() {
  });
 
 
-$(document).on('keydown', null, "s", function open_sidebar(){
+$(document).bind('keydown','s', function open_sidebar(){
   $('.sidebar').animate({
     width: 'toggle'});
   });
