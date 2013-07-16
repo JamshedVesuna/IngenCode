@@ -1,15 +1,14 @@
 function bindS(){
-  $(document).bind('keydown', 's', function (){
-    alert("worked");
+  $(document).bind('keydown', 'alt+s', function (){
     $('.sidebar').animate({width: 'toggle'});
 
   });
 }
 
-$(document).bind('keydown','s', function (){
+//$(document).bind('keydown','s', function (){
 
-  $('.sidebar').animate({width: 'toggle'});
-  });
+  //$('.sidebar').animate({width: 'toggle'});
+ // });
 
 
 $(document).ready(function() {
