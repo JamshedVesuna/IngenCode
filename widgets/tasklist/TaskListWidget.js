@@ -29,6 +29,8 @@ function TaskListWidget(title) {
 		var newTask = $(widget.itemTemplate).clone();
 		$(newTask).attr("id", $(widget.table).find("tr").length.toString());
 		$("table", widget.html).append(newTask);
+		
+		widget.sizeDivAppropriately();
 	}
 	
 	widget.removeCheckedTasks = function(index) {
