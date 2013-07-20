@@ -24,7 +24,9 @@ function TaskListWidget(title) {
 	// store an instance of the list table
 	widget.table = $(widget.html).find("table")[0];
 	
-	// fancy member function for widget :D
+	// Member functions
+	//
+	// Adds a task to the list
 	widget.addTask = function (task) {
 		var newTask = $(widget.itemTemplate).clone();
 		$(newTask).attr("id", $(widget.table).find("tr").length.toString());
@@ -33,6 +35,7 @@ function TaskListWidget(title) {
 		widget.sizeDivAppropriately();
 	}
 	
+	// removes all checked tasks from the list
 	widget.removeCheckedTasks = function(index) {
 		// remove checked elements
 		$(widget.table).find("tr").each( function(index, value) {
@@ -55,6 +58,33 @@ function TaskListWidget(title) {
 			
 			$(value).attr("id", index.toString());
 		});
+	}
+	
+	// converts the list into a nice JSON file
+	widget.exportToJSON = function() {
+		// generate the container object and the list
+		var outObject = new Object();
+		outObject.tasks = [];
+		
+		var checks = $("input[type=\"checkbox\"]", widget.html);
+		var inputs = $("input[type=\"text\"]", widget.html);
+		
+		if (checks.length != inputs.length) {
+			alert("Error: something is seriously wrong");
+			return;
+		}
+		
+		// save away the list
+		for (var n = 0; n < checks.length; n++) {
+			var tempObject = new Object();
+			tempObject.completed = checks[n].checked;
+			tempObject.text = $(inputs[n]).val();
+			
+			outObject.tasks.push(tempObject);
+		}
+		
+		// stringify the object
+		return JSON.stringify(outObject);
 	}
 	
 	return widget;
