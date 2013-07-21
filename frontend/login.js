@@ -6,7 +6,7 @@ function loginSubmit(e) {
 	table.find("input").each( function() {
 		if ($(this).val() == "") {
 			$(this).css("background-color", "red");
-			$(this).click(unHighlight);
+			$(this).focus(unHighlight);
 			return;
 		}
 		
@@ -17,7 +17,7 @@ function loginSubmit(e) {
 		valueList.push(inputEntry);
 	});
 	
-	alert(JSON.stringify(valueList));
+	console.log(JSON.stringify(valueList));
 }
 
 // to unhighlight items that were required for a form input
