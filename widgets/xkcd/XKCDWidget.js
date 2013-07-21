@@ -20,6 +20,8 @@ function XKCDWidget() {
 			image.attr("src", comicObject.img);
 			
 			$(".widgetContent", widget.html).append(image);
+			
+			widget.setTitle("XKCD - " + comicObject.safe_title);
 		}
 	});
 	
