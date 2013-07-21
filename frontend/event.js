@@ -2,10 +2,6 @@
 
 // rig the windows to be displayed
 $(document).ready( function() {
-	var firstWidget = new TaskListWidget("test frame");
+	var firstWidget = new TaskListWidget("Tasks");
 	$("#widgetContainer").append(firstWidget.html);
-	
-	// enable movement of windows
-	$(".widget").draggable();
-	$(".widget").resizable();
 });

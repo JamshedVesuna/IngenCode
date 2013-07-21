@@ -11,22 +11,30 @@ function Widget(title) {
 		}
 	});
 	
+	// Class variables
+	//
 	this.html = $("<div>").html(rawHTML);
 	this.div = $(".widget", this.html)[0];
 	
 	// Class functions
 	//
+	this.movable = function(yes) {
+		$(this.div).draggable(yes);
+		$(this.div).resizable(yes);
+	}
+	
+	// sets the title of the 
 	this.setTitle = function(newTitle) {
-		this.title = newTitle;
-		$(".widgetTitle", this.html).text(this.title);
+		$(".widgetTitle", this.html).text(newTitle);
 	}
 	
-	this.hideTitle = function() {
-		$(".widgetTitle", this.html).setAttr("hidden");
-	}
-	
-	this.showTitle = function() {
-		$(".widgetTitle", this.html).removeAttr("hidden");
+	this.showTitle = function(yes) {
+		if (yes) {
+			$(".widgetTitle", this.html).removeAttr("hidden");
+		}
+		else {
+			$(".widgetTitle", this.html).setAttr("hidden");
+		}
 	}
 	
 	this.sizeDivAppropriately = function() {
@@ -43,4 +51,5 @@ function Widget(title) {
 	
 	// post function definition init
 	this.setTitle(title);
+	this.movable(true);
 }
