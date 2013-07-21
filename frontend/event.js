@@ -7,4 +7,7 @@ $(document).ready( function() {
 	
 	var secondWidget = new AnalogClockWidget();
 	$("#widgetContainer").append(secondWidget.html);
+	
+	var thirdWidget = new XKCDWidget();
+	$("#widgetContainer").append(thirdWidget.html);
 });
