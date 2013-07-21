@@ -13,11 +13,18 @@ function XKCDWidget() {
 			
 				
 			var image = $("<img>");
+			//$(image).load(widget.sizeDivAppropriately);
+			$(image).load(function() {
+				$(widget.div).height($(".widgetContent", widget.html).height() + $(".widgetTitle", widget.html).height());
+			});
 			image.attr("src", comicObject.img);
 			
 			$(".widgetContent", widget.html).append(image);
 		}
 	});
+	
+	// turn off resizable
+	$(widget.div).resizable("destroy");
 	
 	return widget;
 }
