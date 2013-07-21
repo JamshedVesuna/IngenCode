@@ -1,3 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
 
+#face, #largehand, #smallHand {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	
+	width: 250px;
+	height: 250px;
+}
+
+#face {
+	z-index: 0;
+}
+
+#largeHand {
+	z-index: 1;
+}
+
+#smallHand {
+	z-index: 2;
+}

@@ -4,4 +4,7 @@
 $(document).ready( function() {
 	var firstWidget = new TaskListWidget("Tasks");
 	$("#widgetContainer").append(firstWidget.html);
+	
+	var secondWidget = new AnalogClockWidget();
+	$("#widgetContainer").append(secondWidget.html);
 });
