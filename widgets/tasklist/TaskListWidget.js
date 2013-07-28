@@ -14,6 +14,8 @@ function TaskListWidget(title) {
 	});
 	$(".widgetContent", widget.html).append(rawHTML);
 	
+	$(widget).trigger("widgetContentLoaded");
+	
 	// rig JS events in the page
 	$("#addButton", widget.html).click(addTask);
 	$("#removeButton", widget.html).click(removeCheckedTasks);

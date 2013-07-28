@@ -37,6 +37,35 @@ function Widget(title) {
 		}
 	}
 	
+	this.bringToFront = function() {
+		// get the widget div
+		var currentIndex = parseInt($(this).css("z-index"));
+		
+		// search for the highest index
+		var newIndex = currentIndex + 10;
+		$(".widget").each(function() {
+			var index = parseInt($(this).css("z-index"));
+			
+			if (index > newIndex) {
+				newIndex = index + 10;
+				console.log(newIndex);
+			}
+		});
+		
+		console.log(newIndex);
+		
+		$(this).css("z-index", newIndex);
+		$(this).find("*").each(function() {
+			itemIndex = parseInt($(this).css("z-index"));
+			if (isNaN(itemIndex)) {
+				$(this).css("z-index", newIndex);
+			}
+			else {
+				$(this).css("z-index", itemIndex - currentIndex + newIndex);
+			}
+		});
+	}
+	
 	this.sizeDivAppropriately = function() {
 		var container = $(".widget", this.html);
 		var contentDiv = $(".widgetContent", this.html);
@@ -52,4 +81,6 @@ function Widget(title) {
 	// post function definition init
 	this.setTitle(title);
 	this.movable(true);
+	
+	$(this.div).on("mousedown", this.bringToFront);
 }

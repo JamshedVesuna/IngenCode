@@ -28,6 +28,8 @@ function XKCDWidget() {
 			
 			// and change the title
 			widget.setTitle("XKCD - " + comicObject.safe_title);
+			
+			$(widget).trigger("widgetContentLoaded");
 		}
 	});
 	
