@@ -9,7 +9,7 @@
 </xsl:template>
 
 <xsl:template match="widget">
-  <tr>
+  <tr id="@id">
     <td>
       <img class="sidebar-logos" src="{logo/@source}"/>
     </td>
