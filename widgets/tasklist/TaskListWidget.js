@@ -14,6 +14,10 @@ function TaskListWidget(title) {
 	});
 	$(".widgetContent", widget.html).append(rawHTML);
 	
+	// rig JS events in the page
+	$("#addButton", widget.html).click(addTask);
+	$("#removeButton", widget.html).click(removeCheckedTasks);
+	
 	// plug the widget in
 	widget.div.object = widget;	
 	
@@ -90,6 +94,7 @@ function TaskListWidget(title) {
 	return widget;
 }
 
+// task object
 function Task(text) {
 	if (text == null) {
 		this.text = "";
@@ -98,4 +103,22 @@ function Task(text) {
 		this.text = text;
 	}
 	this.completed = false;
+}
+
+// adds a task to the list
+function addTask(e) {
+	// get the class object
+	var widgetHTML = $(event.currentTarget).closest(".widget")[0];
+	var widget = widgetHTML.object;
+	
+	widget.addTask(new Task());
+}
+
+// removes a task from the list
+function removeCheckedTasks(e) {
+	// get the class object
+	var widgetHTML = $(event.currentTarget).closest(".widget")[0];
+	var widget = widgetHTML.object;
+	
+	widget.removeCheckedTasks();
 }
