@@ -66,18 +66,6 @@ function Widget(title) {
 		});
 	}
 	
-	this.sizeDivAppropriately = function() {
-		var container = $(".widget", this.html);
-		var contentDiv = $(".widgetContent", this.html);
-		var title = $(".widgetTitle", this.html);
-		
-		// set the height if it's too large for the container
-		var combinedHeight = title.outerHeight() + contentDiv.outerHeight();
-		if (combinedHeight > container.height()) {
-			container.height(combinedHeight);
-		}
-	}
-	
 	// post function definition init
 	this.setTitle(title);
 	this.movable(true);

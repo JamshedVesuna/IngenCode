@@ -66,6 +66,18 @@ function TaskListWidget(title) {
 		});
 	}
 	
+	widget.sizeDivAppropriately = function() {
+		var container = $(".widget", this.html);
+		var contentDiv = $(".widgetContent", this.html);
+		var title = $(".widgetTitle", this.html);
+		
+		// set the height if it's too large for the container
+		var combinedHeight = title.outerHeight() + contentDiv.outerHeight();
+		if (combinedHeight > container.height()) {
+			container.height(combinedHeight);
+		}
+	}
+	
 	// converts the list into a nice JSON file
 	widget.exportToJSON = function() {
 		// generate the container object and the list
