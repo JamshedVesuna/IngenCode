@@ -5,7 +5,5 @@ function IframeWidget(title) {
 	
 	$(".widgetContent", widget.html).load("/widgets/iframe/content.html");
 	
-	$(widget).trigger("widgetContentLoaded");
-	
 	return widget;
 }

@@ -15,9 +15,6 @@ function AnalogClockWidget() {
 	});
 	$(".widgetContent", widget.html).append(rawHTML);
 	
-	// trigger the content loaded event
-	$(widget).trigger("widgetContentLoaded");
-	
 	widget.tickFunction = function() {
 		var now = new Date();
 		
