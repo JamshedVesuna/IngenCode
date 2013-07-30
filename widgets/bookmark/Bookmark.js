@@ -9,10 +9,18 @@ function Bookmark() {
 		success: function(data) {
 			// append the data to widget content
 			$(widget.div).find(".widgetContent").append(data);
+			
+			// store away the bookmark list
+			widget.bookmarkList = $(widget.html).find(".bookmarkList")[0];
 		}
 	});
 	
-	widget.onDrop(e) {
+	widget.addBookmark(linkText) {
+		var newItem = $("<li>");
+		$(newItem).attr("class", "bookmarkItem");
+		$(newItem).text(linkText);
+		
+		$(widget.bookmarkList).append(newItem);
 	}
 	
 	// set the window.onDrop to listen for drops in widgetContent
