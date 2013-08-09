@@ -15,6 +15,7 @@ function Bookmark() {
 		}
 	});
 	
+	// adds a bookmark to the list
 	widget.addBookmark(linkText) {
 		var newItem = $("<li>");
 		$(newItem).attr("class", "bookmarkItem");
@@ -22,7 +23,15 @@ function Bookmark() {
 		
 		$(widget.bookmarkList).append(newItem);
 	}
-	
-	// set the window.onDrop to listen for drops in widgetContent
-	$(widget.div).find(".widgetContent").on("drop", widget.onDrop);
+
+	// removes a bookmark from the list
+	widget.removeBookmark(index) {
+		var bList = widget.bookmarkList;
+
+		$(bList).eq(index).remove();
+	}
+
+	// on drop function runs when an item is placed in the div
+	widget.onDrop() {
+	}
 }
